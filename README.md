@@ -4,7 +4,8 @@
     2. Write unit tests
     3. Make the app docker containerised
     4. Write instructions for running app
-2. Make the project scalable    
+2. Make the project scalable
+   Used Watermil to handle message acknowledgement manually 
 
 ## Tech stack
 * [GO](https://go.dev/) as a main language
@@ -17,7 +18,7 @@
  
 ## Running locally
 1. Start docker 
-`docker-compose up`
+`docker run -p 9092:9092 apache/kafka:3.7.0`
 2. Set configurations. Project contains `.env/dev` file to ease setup environment variables
 `export $(cat .env/dev)`
 3. Run service
